@@ -1,4 +1,4 @@
-# Splitpayment para Woocommerce com a API pagar.me
+## Splitpayment para Woocommerce com a API pagar.me
 
 ### Visão Geral:
 
@@ -9,16 +9,17 @@ O objetivo do script é mostrar de forma simplificada o uso da API do pagar.me p
 
 O exemplo de código mostrado foi aplicado em um site WordPress juntamente com o Woocommerce, mas o script pode ser adaptado para aplicar em sites que utilizam tecnologias diferentes. Os requisitos são:
 
-*Site WordPress;
-*Conta Pagar.me do proprietário da Loja;
-*Instalação e configuração dos plugins: Woocommerce e Pagar.me for WooCommerce;
+* Site WordPress;
+* Conta Pagar.me do proprietário da Loja;
+* Instalação e configuração dos plugins: Woocommerce e Pagar.me for WooCommerce;
 
 ******
 ### Observações:
 
 O script disponibilizado foi testado com os plugins Pagar.me for WooCommerce na versão 2.5.0 e Woocommerce versão 4.7.1.
 
-#### Funcionamento:
+******
+### Funcionamento:
 
 No final do script, esta linha é responsável por adicionar uma ação no WordPress toda vez que um pagamento for registrado pelo Gateway do Pagar.me, adicionando a execução da função wc_pagarme_slip_rules que fará o Splitpayment. Isso fará com que o Splitpayment ocorra toda vez que for feito um pagamento via Pagar.me.
 

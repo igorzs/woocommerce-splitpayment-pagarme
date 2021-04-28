@@ -32,6 +32,5 @@ function wc_pagarme_slip_rules( $data, $order ) {
     return $data;
 	
 }
-add_action( 'wc_pagarme_transaction_data', 'wc_pagarme_slip_rules', 10, 2 );
 
-/*    END: SPLIT DE PAGAMENTO - PAGAR.ME   */
+add_action( 'wc_pagarme_transaction_data', 'wc_pagarme_slip_rules', 10, 2 );
