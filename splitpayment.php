@@ -8,10 +8,10 @@ function wc_pagarme_slip_rules( $data, $order ) {
     $id_receiver_vendor = 'ID_0000';
     $porcentage_vendor = '85';
 
-	/*    SPLIT RULES     */
-	$data['split_rules'] = array(
+    /*    SPLIT RULES     */
+    $data['split_rules'] = array(
 			
-        /*   SPLIT OWNER RECEIVER */
+    	/*   SPLIT OWNER RECEIVER */
         array(
             'recipient_id'          => $id_receiver_owner,
             'percentage'            => $porcentage_owner,
@@ -26,11 +26,10 @@ function wc_pagarme_slip_rules( $data, $order ) {
             'liable'                => true,
             'charge_processing_fee' => true,
         ),
-	);
-	/*    SPLIT RULES [END]   */
+     );
+     /*    SPLIT RULES [END]   */
 
     return $data;
-	
 }
 
 add_action( 'wc_pagarme_transaction_data', 'wc_pagarme_slip_rules', 10, 2 );
