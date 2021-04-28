@@ -1,11 +1,3 @@
-# woocommerce-splitpayment-pagarme
-
-Plugin Name: Pagar.me for WooCommerce
-Plugin URI: http://github.com/claudiosmweb/woocommerce-pagarme
-Description: Gateway de pagamento Pagar.me para WooCommerce.
- * Author: Pagar.me, Claudio Sanches
- Version: 2.5.0
-
 # Splitpayment para Woocommerce com a API pagar.me
 
 ### Visão Geral:
@@ -30,19 +22,19 @@ O script disponibilizado foi testado com os plugins Pagar.me for WooCommerce na 
 
 No final do script, esta linha é responsável por adicionar uma ação no WordPress toda vez que um pagamento for registrado pelo Gateway do Pagar.me, adicionando a execução da função wc_pagarme_slip_rules que fará o Splitpayment. Isso fará com que o Splitpayment ocorra toda vez que for feito um pagamento via Pagar.me.
 
-    ```bash
+    
     add_action( 'wc_pagarme_transaction_data', 'wc_pagarme_slip_rules', 10, 2 );
-    ```
+    
 
 As variáveis de configuração definem o ID de recebedor da conta Pagar.me do proprietário da loja, ID de receber do fornecedor registrado na conta Pagar.me do proprietário e suas comissões (em porcentagem).
 
-    ```bash
+    
     $id_receiver_owner= 'ID_1111';
     $porcentage_owner = '15';
 
     $id_receiver_vendor = 'ID_0000';
     $porcentage_vendor = '85';
-    ```
+    
 
 No caso do ID do fornecedor, é possível adaptar uma consulta a um banco de dados para buscar o ID de recebedor do fornecedor que cadastrou o produto, caso a loja virtual tenha mais de um fornecedor.
 
