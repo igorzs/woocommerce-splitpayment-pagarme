@@ -27,7 +27,7 @@ No final do script, esta linha é responsável por adicionar uma ação no WordP
     add_action( 'wc_pagarme_transaction_data', 'wc_pagarme_slip_rules', 10, 2 );
     
 
-As variáveis de configuração definem o ID de recebedor da conta Pagar.me do proprietário da loja, ID de receber do fornecedor registrado na conta Pagar.me do proprietário e suas comissões (em porcentagem).
+As variáveis de configuração definem o ID de recebedor da conta Pagar.me do proprietário da loja, ID de receberdor do fornecedor registrado na conta Pagar.me do proprietário e suas comissões (em porcentagem).
 
     
     $id_receiver_owner= 'ID_1111';
